@@ -2,9 +2,7 @@
 
 ## Screenshots
 
-| Ready | Running |
-|---|---|
-| ![stopw ready to start](screenshots/main.png) | ![stopw countdown running](screenshots/running.png) |
+ ![stopw ready to start](screenshots/ready.png)  ![stopw set](screenshots/set.png)  ![stopw countdown running](screenshots/running.png) 
 
 A compact timer for GNOME that performs an action when the countdown ends.
 
