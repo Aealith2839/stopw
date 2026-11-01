@@ -2,7 +2,19 @@
 
 ## Screenshots
 
- ![stopw ready to start](screenshots/ready.png)  ![stopw set](screenshots/set.png)  ![stopw countdown running](screenshots/running.png) 
+<table>
+  <tr>
+    <td align="center">
+      <img src="screenshots/ready.png" width="90%" alt="stopw ready to start">
+    </td>
+    <td align="center">
+      <img src="screenshots/set.png" width="90%" alt="stopw set">
+    </td>
+    <td align="center">
+      <img src="screenshots/running.png" width="90%" alt="stopw countdown running">
+    </td>
+  </tr>
+</table>
 
 A compact timer for GNOME that performs an action when the countdown ends.
 
