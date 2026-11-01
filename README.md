@@ -3,9 +3,11 @@
 ## Screenshots
 
 <p align="center">
-  <img src="screenshots/ready.png" width="30%" alt="stopw ready to start" style="margin: 0 20px;">
-  <img src="screenshots/set.png" width="30%" alt="stopw set" style="margin: 0 20px;">
-  <img src="screenshots/running.png" width="30%" alt="stopw countdown running" style="margin: 0 20px;">
+  <img src="screenshots/ready.png" width="30%" alt="stopw ready to start">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="screenshots/set.png" width="30%" alt="stopw set">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="screenshots/running.png" width="30%" alt="stopw countdown running">
 </p>
 
 A compact timer for GNOME that performs an action when the countdown ends.
