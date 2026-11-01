@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-<table>
+<table border="0">
   <tr>
     <td align="center">
       <img src="screenshots/ready.png" width="90%" alt="stopw ready to start">
