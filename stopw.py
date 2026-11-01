@@ -116,7 +116,7 @@ class NotificationDialog(Adw.Window):
         super().__init__(transient_for=parent)
         # The internal window title is retained for window management. No
         # HeaderBar is added, matching the existing titlebar-free presentation.
-        self.set_title(_("Paramètres de notification"))
+        self.set_title(_("Notification Settings"))
         self.set_modal(True)
         self.set_default_size(380, 360)
         self.set_resizable(False)
@@ -131,12 +131,12 @@ class NotificationDialog(Adw.Window):
         self.set_content(main_box)
 
         description = Gtk.Label(
-            label=_("Personnalisez l'alerte de fin de décompte :"))
+            label=_("Customize the end-of-countdown alert:"))
         description.set_halign(Gtk.Align.START)
         main_box.append(description)
         self.text_entry = Gtk.Entry()
         self.text_entry.set_placeholder_text(
-            _("Message de notification (optionnel)..."))
+            _("Notification message (optional)…"))
         self.text_entry.set_text(current_text)
         main_box.append(self.text_entry)
 
@@ -144,32 +144,32 @@ class NotificationDialog(Adw.Window):
         # the outer options closer. The bottom controls keep their positions.
         group_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
         group_box.set_margin_top(6)
-        sound_label = Gtk.Label(label=_("Signal sonore :"))
+        sound_label = Gtk.Label(label=_("Sound:"))
         sound_label.set_halign(Gtk.Align.START)
         sound_label.set_margin_bottom(10)
         group_box.append(sound_label)
 
-        self.radio_none = Gtk.CheckButton(label=_("Aucun son"))
+        self.radio_none = Gtk.CheckButton(label=_("No sound"))
         self.radio_none.set_margin_bottom(4)
         group_box.append(self.radio_none)
         self.radio_default = Gtk.CheckButton(
-            label=_("Bip système par défaut"), group=self.radio_none)
+            label=_("Default system sound"), group=self.radio_none)
         self.radio_default.set_margin_bottom(4)
         group_box.append(self.radio_default)
         self.radio_custom = Gtk.CheckButton(
-            label=_("Fichier audio personnalisé"), group=self.radio_none)
+            label=_("Custom audio file"), group=self.radio_none)
         self.radio_custom.set_margin_bottom(16)
         group_box.append(self.radio_custom)
         for radio in (self.radio_none, self.radio_default, self.radio_custom):
             radio.add_css_class("notification-option")
 
         file_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=12)
-        self.btn_file = Gtk.Button(label=_("Parcourir..."))
+        self.btn_file = Gtk.Button(label=_("Browse…"))
         self.btn_file.connect("clicked", self.on_browse_clicked)
         file_box.append(self.btn_file)
         self.lbl_filename = Gtk.Label(label=(
             os.path.basename(custom_sound_path) if custom_sound_path
-            else _("Aucun fichier sélectionné")))
+            else _("No file selected")))
         self.lbl_filename.add_css_class("dim-label")
         file_box.append(self.lbl_filename)
         group_box.append(file_box)
@@ -186,7 +186,7 @@ class NotificationDialog(Adw.Window):
             self.radio_default.set_active(True)
         self.set_custom_active(self.radio_custom.get_active())
 
-        save_button = Gtk.Button(label=_("Enregistrer"))
+        save_button = Gtk.Button(label=_("Save"))
         save_button.add_css_class("suggested-action")
         save_button.set_margin_top(10)
         save_button.connect("clicked", self.on_save_clicked)
@@ -209,7 +209,7 @@ class NotificationDialog(Adw.Window):
     def on_browse_clicked(self, button):
         # FileDialog is asynchronous: its result must be collected in a callback.
         dialog = Gtk.FileDialog.new()
-        dialog.set_title(_("Sélectionner un son"))
+        dialog.set_title(_("Select a sound"))
         dialog.open(self, None, self.on_file_selected)
 
     def on_file_selected(self, dialog, result):
@@ -241,7 +241,7 @@ class CommandDialog(Adw.Window):
 
     def __init__(self, parent, current_command, on_save_callback):
         super().__init__(transient_for=parent)
-        self.set_title(_("Commande personnalisée"))
+        self.set_title(_("Custom Command"))
         self.set_modal(True)
         self.set_default_size(380, 170)
         self.set_resizable(False)
@@ -253,7 +253,7 @@ class CommandDialog(Adw.Window):
         main_box.set_margin_start(20)
         main_box.set_margin_end(20)
         self.set_content(main_box)
-        label = Gtk.Label(label=_("Votre commande :"))
+        label = Gtk.Label(label=_("Your command:"))
         label.set_halign(Gtk.Align.START)
         main_box.append(label)
 
@@ -263,11 +263,11 @@ class CommandDialog(Adw.Window):
         self.command_entry.set_max_length(0)
         self.command_entry.set_text(current_command)
         self.command_entry.set_tooltip_text(_(
-            "Exécutée avec /bin/sh à la fin du décompte, "
-            "avec vos droits utilisateur."))
+            "Run with /bin/sh when the countdown ends, "
+            "with your user privileges."))
         main_box.append(self.command_entry)
 
-        self.save_button = Gtk.Button(label=_("Enregistrer"))
+        self.save_button = Gtk.Button(label=_("Save"))
         self.save_button.add_css_class("suggested-action")
         self.save_button.set_margin_top(10)
         self.save_button.connect("clicked", self.on_save_clicked)
@@ -309,14 +309,14 @@ class StopwWindow(Adw.ApplicationWindow):
         self.set_size_request(240, 250)
         self.set_resizable(False)
         self.action_labels = {
-            "shutdown": _("Éteindre"), "reboot": _("Redémarrer"),
-            "suspend": _("Veille"), "notify": _("Notification"),
-            "custom": _("Commande"),
+            "shutdown": _("Shut down"), "reboot": _("Restart"),
+            "suspend": _("Suspend"), "notify": _("Notification"),
+            "custom": _("Command"),
         }
         self.running_action_labels = {
-            "shutdown": _("Avant arrêt"), "reboot": _("Avant redémarrage"),
-            "suspend": _("Avant veille"), "notify": _("Avant notification"),
-            "custom": _("Avant commande"),
+            "shutdown": _("Before shutdown"), "reboot": _("Before restart"),
+            "suspend": _("Before suspend"), "notify": _("Before notification"),
+            "custom": _("Before command"),
         }
         # A non-None source ID means that its GLib callback is registered.
         self.timer_source_id = None
@@ -334,7 +334,7 @@ class StopwWindow(Adw.ApplicationWindow):
         header.set_title_widget(Gtk.Label(label=""))
         self.reset_button = Gtk.Button()
         self.reset_button.set_icon_name("view-refresh-symbolic")
-        self.reset_button.set_tooltip_text(_("Remettre à zéro (Suppr)"))
+        self.reset_button.set_tooltip_text(_("Reset (Delete)"))
         self.reset_button.set_action_name("app.reset_timer")
         header.pack_start(self.reset_button)
 
@@ -342,11 +342,11 @@ class StopwWindow(Adw.ApplicationWindow):
         menu_button.set_icon_name("open-menu-symbolic")
         menu = Gio.Menu()
         preferences = Gio.Menu()
-        preferences.append(_("Sauvegarder timer"), "app.remember_timer")
-        preferences.append(_("Sauvegarder action"), "app.remember_action")
+        preferences.append(_("Remember timer"), "app.remember_timer")
+        preferences.append(_("Remember action"), "app.remember_action")
         menu.append_section(None, preferences)
         about_section = Gio.Menu()
-        about_section.append(_("À propos de stopw"), "app.about")
+        about_section.append(_("About stopw"), "app.about")
         menu.append_section(None, about_section)
         menu_button.set_menu_model(menu)
         header.pack_start(menu_button)
@@ -400,12 +400,12 @@ class StopwWindow(Adw.ApplicationWindow):
         self.action_button.set_size_request(-1, 42)
         action_menu = Gio.Menu()
         for label, action in (
-            (_("Éteindre"), "app.set_action_shutdown"),
-            (_("Redémarrer"), "app.set_action_reboot"),
-            (_("Mettre en veille"), "app.set_action_suspend"),
-            (_("Notification / Son"), "app.set_action_notify"),
-            (_("Configurer la notif..."), "app.configure_notify"),
-            (_("Commande..."), "app.set_action_custom"),
+            (_("Shut down"), "app.set_action_shutdown"),
+            (_("Restart"), "app.set_action_reboot"),
+            (_("Suspend"), "app.set_action_suspend"),
+            (_("Notification / Sound"), "app.set_action_notify"),
+            (_("Configure notification…"), "app.configure_notify"),
+            (_("Custom command…"), "app.set_action_custom"),
         ):
             action_menu.append(label, action)
         self.action_button.set_menu_model(action_menu)
@@ -441,7 +441,7 @@ class StopwWindow(Adw.ApplicationWindow):
         self.action_stack.set_visible_child_name("selection")
         content_box.append(self.action_stack)
 
-        self.start_button = Gtk.Button(label=_("Commencer"))
+        self.start_button = Gtk.Button(label=_("Start"))
         self.start_button.set_halign(Gtk.Align.FILL)
         self.start_button.add_css_class("orange-button")
         self.start_button.set_size_request(-1, 42)
@@ -479,7 +479,7 @@ class StopwWindow(Adw.ApplicationWindow):
         self.minutes = (total % 3600) // 60
         self.seconds = total % 60
         self.notif_text = config.get(
-            "Settings", "notif_text", fallback=_("Minuteur terminé !"))
+            "Settings", "notif_text", fallback=_("Timer finished!"))
         self.notif_sound = config.get("Settings", "notif_sound", fallback="default")
         self.custom_sound = config.get("Settings", "custom_sound", fallback="")
 
@@ -747,7 +747,7 @@ class StopwWindow(Adw.ApplicationWindow):
             self.timer_source_id = None
         self.deadline = None
         self.clear_selection()
-        self.start_button.set_label(_("Commencer"))
+        self.start_button.set_label(_("Start"))
         self.start_button.remove_css_class("red-button")
         self.start_button.add_css_class("orange-button")
         self.action_button.set_sensitive(True)
@@ -959,7 +959,7 @@ class StopwApp(Adw.Application):
         about = Adw.AboutWindow(
             transient_for=self.window, application_name=APP_NAME,
             application_icon="time-symbolic", developer_name="Eric",
-            version="0.1.0", comments=_("Minuteur épuré pour GNOME"),
+            version="0.1.0", comments=_("A compact timer for GNOME"),
             # Display the license selected for the new stopw contributions.
             # Upstream notices are preserved separately; see LICENSING.md.
             license_type=Gtk.License.GPL_3_0)
