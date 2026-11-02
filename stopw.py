@@ -39,6 +39,8 @@ import os
 import gettext
 import configparser
 import subprocess
+from pathlib import Path
+
 import gi
 
 # Select introspection namespaces before importing their Python bindings.
@@ -52,8 +54,8 @@ APP_ID = "org.eric.stopw"
 APP_NAME = "stopw"
 CONFIG_DIR = os.path.expanduser("~/.config/stopw")
 CONFIG_FILE = os.path.join(CONFIG_DIR, "config.ini")
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-LOCALE_DIR = os.path.join(BASE_DIR, "locale")
+BASE_DIR = Path(__file__).resolve().parent
+LOCALE_DIR = BASE_DIR / "locale"
 SELECTION_TIMEOUT_SECONDS = 5
 MAX_TIMER_SECONDS = 99 * 3600 + 59 * 60 + 59
 
@@ -325,6 +327,7 @@ class StopwWindow(Adw.ApplicationWindow):
         self.deadline = None
         self.active_field = None
         self.typing_buffer = ""
+        self.media_player = None
         self.load_settings()
 
         main_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
@@ -775,17 +778,35 @@ class StopwWindow(Adw.ApplicationWindow):
             self.run_command(["systemctl", "suspend"])
         elif self.current_action == "notify":
             if self.notif_text.strip():
-                self.run_command(["notify-send", APP_NAME, self.notif_text])
+                self.show_notification(self.notif_text)
+
             if self.notif_sound == "default":
-                self.run_command(["canberra-gtk-play", "--id=complete"])
+                self.play_sound(
+                    BASE_DIR / "sounds" / "complete.wav")
             elif (self.notif_sound == "custom" and self.custom_sound
                   and os.path.isfile(self.custom_sound)):
-                self.run_command(["canberra-gtk-play", "--file=" + self.custom_sound])
+                self.play_sound(Path(self.custom_sound))
         elif self.current_action == "custom" and self.custom_command.strip():
             # Shell interpretation is intentional for user-authored commands.
             # It permits pipes/redirections and grants the command all privileges
             # already held by this user. Never silently insert untrusted text.
             self.run_command(["/bin/sh", "-c", self.custom_command])
+
+    def show_notification(self, message):
+        """Send a desktop notification through the application's GIO backend."""
+        notification = Gio.Notification.new(APP_NAME)
+        notification.set_body(message)
+        notification.set_priority(Gio.NotificationPriority.NORMAL)
+        self.get_application().send_notification(
+            "stopw-timer-finished", notification)
+
+    def play_sound(self, path):
+        """Play a local audio file with GTK's media backend."""
+        try:
+            self.media_player = Gtk.MediaFile.new_for_filename(str(path))
+            self.media_player.play()
+        except Exception as error:
+            print(f"Unable to play sound {path}: {error}", file=sys.stderr)
 
     def on_close_request(self, window):
         self.cancel_selection_timeout()
