@@ -50,6 +50,31 @@ The interface includes:
 - Optional restoration of the last started duration and selected action.
 - Support for the system light/dark appearance preference.
 
+## Origins and inspirations
+
+stopw is a GitHub fork of
+[Time Switch](https://github.com/fsobolev/timeswitch) by Fyodor Sobolev,
+an archived and abandoned GNOME timer application. Its timer-based system
+actions inspired several stopw features.
+
+The compact, focused interface approach is also inspired by
+[Kooha](https://github.com/davep/kooha) by Dave Patrick.
+
+stopw no longer uses Time Switch code. It is an independent application with
+its own implementation, interface and behaviour.
+
+## Development approach
+
+stopw is my project. I defined its purpose, features, interface, interaction
+model and expected behaviour.
+
+The application code was written with Gemini and Perplexity. GitHub-related
+work, including repository documentation and workflow guidance, was supported
+by ChatGPT and DeepSeek.
+
+All design decisions, implementation review, testing and final integration
+were made by me.
+
 ## Run from source
 
 From the repository root, run:
