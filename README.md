@@ -93,3 +93,7 @@ The original Time Switch license is preserved in
 
 See [CREDITS.md](CREDITS.md) and [LICENSING.md](LICENSING.md) for further
 credits and licensing information.
+
+sounds/complete.ogg originated from Interface sounds by Kenney
+(https://kenney.nl/assets/interface-sounds)
+License: Creative Commons CC0 1.0
