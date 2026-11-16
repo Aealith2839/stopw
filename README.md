@@ -18,17 +18,13 @@ the scheduled action.
 
 ## Project status
 
-stopw is under development.
+stopw is under active development.
 
-The application currently runs from source as a standalone Python script.
+The application can be run from source, installed locally with Meson,
+or built and installed as a Flatpak.
 
-The distribution goal is a ready-to-use Linux application that can be
-launched from the desktop application menu without opening a terminal.
-A downloadable executable distribution and a Flatpak version are planned.
-The executable distribution format has not yet been selected.
-
-Installation packages, a dedicated application icon and updated desktop
-integration are not available yet.
+The Flatpak manifest is intended for local builds. Publication to
+Flathub is not yet configured.
 
 ## Features
 
@@ -81,6 +77,33 @@ From the repository root, run:
 
 ```bash
 python3 stopw.py
+```
+
+## Install with Meson
+
+To build and install stopw for your user account, run:
+
+```bash
+meson setup build --prefix=$HOME/.local
+meson compile -C build
+meson install -C build
+```
+
+The application should then be available as **stopw** in the GNOME
+application menu.
+
+## Build and install with Flatpak
+
+To build and install the Flatpak locally, run:
+
+```bash
+flatpak-builder --user --install --force-clean build-flatpak org.eric.stopw.yml
+```
+
+Then launch it with:
+
+```bash
+flatpak run org.eric.stopw
 ```
 
 ## Credits and licensing
