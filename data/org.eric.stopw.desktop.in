@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=stopw
+GenericName=Timer
+Comment=A compact timer for GNOME
+Exec=stopw
+Icon=org.eric.stopw
+Terminal=false
+Categories=Utility;
+StartupNotify=true
+X-GNOME-UsesNotifications=true

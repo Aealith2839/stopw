@@ -1,0 +1,35 @@
+app-id: org.eric.stopw
+
+runtime: org.gnome.Platform
+runtime-version: '49'
+sdk: org.gnome.Sdk
+
+command: stopw
+
+finish-args:
+  # Affichage Wayland et repli X11.
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+
+  # Lecture audio, notamment via la compatibilité PulseAudio de PipeWire.
+  - --socket=pulseaudio
+
+  # Actions système sur le bus D-Bus système.
+  - --system-talk-name=org.freedesktop.login1
+  - --system-talk-name=org.freedesktop.ConsoleKit
+
+  # Accès aux fichiers audio personnalisés du répertoire personnel.
+  - --filesystem=home
+
+modules:
+  - name: stopw
+    buildsystem: meson
+    sources:
+      - type: dir
+        path: .
+        skip:
+          - build
+          - build-flatpak
+          - .flatpak-builder

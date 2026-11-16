@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.eric.stopw</id>
+  <name>stopw</name>
+  <summary>A compact timer for GNOME</summary>
+  <description>
+    <p>
+      stopw is a compact countdown timer for GNOME. It lets you set a
+      duration, choose an action to run when the countdown reaches zero,
+      and optionally remember the last duration and action.
+    </p>
+    <p>
+      Available actions include sending a notification, playing a sound,
+      suspending the system, shutting it down, rebooting it, or running a
+      custom command.
+    </p>
+  </description>
+  <developer_name>Eric B.</developer_name>
+  <launchable type="desktop-id">org.eric.stopw.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-only</project_license>
+  <recommends>
+    <control>keyboard</control>
+    <control>pointing</control>
+  </recommends>
+  <releases>
+    <release version="0.1.0" date="2026-11-12">
+      <description>
+        <p>Initial release.</p>
+      </description>
+    </release>
+  </releases>
+  <content_rating type="oars-1.1"/>
+</component>

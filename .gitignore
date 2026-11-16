@@ -1,3 +1,17 @@
 __pycache__/
 *.pyc
-sounds/complete.wav
+
+# Meson and Flatpak build artefacts
+build/
+build-flatpak/
+.flatpak-builder/
+
+# Generated GSettings schema
+data/gschemas.compiled
+
+# Compiled gettext catalogues
+*.mo
+po/*/LC_MESSAGES/
+
+# Local backup files
+*.before-*

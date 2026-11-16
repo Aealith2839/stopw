@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.eric.stopw" path="/org/eric/stopw/">
+    <key name="remember-timer" type="b">
+      <default>true</default>
+      <summary>Remember the last timer duration</summary>
+      <description>
+        Restore the last duration validated with Start.
+      </description>
+    </key>
+
+    <key name="last-timer-seconds" type="i">
+      <range min="0" max="359999"/>
+      <default>0</default>
+      <summary>Last validated timer duration</summary>
+      <description>
+        Duration, in seconds, validated by Start.
+      </description>
+    </key>
+
+    <key name="remember-action" type="b">
+      <default>true</default>
+      <summary>Remember the last action</summary>
+      <description>
+        Restore the last action validated with Start.
+      </description>
+    </key>
+
+    <key name="last-action" type="s">
+      <default>""</default>
+      <summary>Last validated action</summary>
+      <description>
+        Action validated by Start. Empty means no action.
+      </description>
+    </key>
+
+    <key name="notification-text" type="s">
+      <default>""</default>
+      <summary>Notification text</summary>
+      <description>
+        Optional text displayed when the timer ends.
+      </description>
+    </key>
+
+    <key name="notification-sound" type="s">
+      <choices>
+        <choice value="none"/>
+        <choice value="default"/>
+        <choice value="custom"/>
+      </choices>
+      <default>"default"</default>
+      <summary>Notification sound</summary>
+      <description>
+        Sound played when the timer ends.
+      </description>
+    </key>
+
+    <key name="custom-sound-path" type="s">
+      <default>""</default>
+      <summary>Custom sound file</summary>
+      <description>
+        Path of the custom audio file.
+      </description>
+    </key>
+
+    <key name="custom-command" type="s">
+      <default>""</default>
+      <summary>Custom command</summary>
+      <description>
+        Command executed when the timer ends.
+      </description>
+    </key>
+  </schema>
+</schemalist>

@@ -1,0 +1,163 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: stopw 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 20:00+0100\n"
+"PO-Revision-Date: 2026-11-12 20:00+0100\n"
+"Last-Translator: Eric B.\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Notification Settings"
+msgstr "Paramètres de notification"
+
+msgid "Customize the end-of-countdown alert:"
+msgstr "Personnalisez l’alerte de fin de minuteur :"
+
+msgid "Notification message (optional)…"
+msgstr "Message de notification (facultatif)…"
+
+msgid "Sound:"
+msgstr "Son :"
+
+msgid "No sound"
+msgstr "Aucun son"
+
+msgid "Default system sound"
+msgstr "Son système par défaut"
+
+msgid "Custom audio file"
+msgstr "Fichier audio personnalisé"
+
+msgid "Browse…"
+msgstr "Parcourir…"
+
+msgid "No file selected"
+msgstr "Aucun fichier sélectionné"
+
+msgid "Select a sound"
+msgstr "Sélectionner un son"
+
+msgid "Save"
+msgstr "Enregistrer"
+
+msgid "Custom Command"
+msgstr "Commande personnalisée"
+
+msgid "Your command:"
+msgstr "Votre commande :"
+
+msgid ""
+"Run with /bin/sh when the countdown ends, with your user privileges."
+msgstr ""
+"Exécutée avec /bin/sh à la fin du minuteur, avec vos privilèges "
+"utilisateur."
+
+msgid "Shut down"
+msgstr "Éteindre"
+
+msgid "Restart"
+msgstr "Redémarrer"
+
+msgid "Suspend"
+msgstr "Mettre en veille"
+
+msgid "Notification"
+msgstr "Notification"
+
+msgid "Command"
+msgstr "Commande"
+
+msgid "Before shutdown"
+msgstr "Avant l’arrêt"
+
+msgid "Before restart"
+msgstr "Avant le redémarrage"
+
+msgid "Before suspend"
+msgstr "Avant la mise en veille"
+
+msgid "Before notification"
+msgstr "Avant la notification"
+
+msgid "Before command"
+msgstr "Avant la commande"
+
+msgid "Before action"
+msgstr "Avant l’action"
+
+msgid "Action"
+msgstr "Action"
+
+msgid "Notification / Sound"
+msgstr "Notification / Son"
+
+msgid "Configure notification…"
+msgstr "Configurer la notification…"
+
+msgid "Custom command…"
+msgstr "Commande personnalisée…"
+
+msgid "Start"
+msgstr "Démarrer"
+
+msgid "Stop"
+msgstr "Arrêter"
+
+msgid "Reset (Delete)"
+msgstr "Réinitialiser (Suppr)"
+
+msgid "Remember timer"
+msgstr "Mémoriser le minuteur"
+
+msgid "Remember action"
+msgstr "Mémoriser l’action"
+
+msgid "About stopw"
+msgstr "À propos de stopw"
+
+msgid "Could not save preferences. See the console for details."
+msgstr ""
+"Impossible d’enregistrer les préférences. Consultez la console pour "
+"plus de détails."
+
+msgid ""
+"Could not save notification settings. See the console for details."
+msgstr ""
+"Impossible d’enregistrer les paramètres de notification. Consultez la "
+"console pour plus de détails."
+
+msgid ""
+"Could not save the custom command. See the console for details."
+msgstr ""
+"Impossible d’enregistrer la commande personnalisée. Consultez la "
+"console pour plus de détails."
+
+msgid "Could not read the custom audio file."
+msgstr "Impossible de lire le fichier audio personnalisé."
+
+msgid ""
+"Could not run the custom command. Check it in a terminal."
+msgstr ""
+"Impossible d’exécuter la commande personnalisée. Vérifiez-la dans un "
+"terminal."
+
+msgid "The custom command was interrupted after 30 seconds."
+msgstr ""
+"La commande personnalisée a été interrompue après 30 secondes."
+
+msgid ""
+"Could not run the system action: no compatible session manager was "
+"found."
+msgstr ""
+"Impossible d’exécuter l’action système : aucun gestionnaire de session "
+"compatible n’a été trouvé."
+
+msgid ""
+"Could not run the system action. See the console for details."
+msgstr ""
+"Impossible d’exécuter l’action système. Consultez la console pour plus "
+"de détails."
