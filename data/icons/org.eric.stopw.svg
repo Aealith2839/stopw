@@ -3,7 +3,7 @@
    viewBox="0 0 64 64"
    version="1.1"
    id="svg13"
-   sodipodi:docname="stopw5.svg"
+   sodipodi:docname="org.eric.stopw.svg"
    inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -23,15 +23,15 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="true"
      showguides="true"
-     inkscape:zoom="12.81631"
-     inkscape:cx="22.588405"
-     inkscape:cy="32.380615"
-     inkscape:window-width="2560"
-     inkscape:window-height="1371"
+     inkscape:zoom="10.18"
+     inkscape:cx="24.901768"
+     inkscape:cy="40.962672"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg13">
+     inkscape:current-layer="Layer_1">
     <inkscape:grid
        id="grid13"
        units="px"
@@ -95,6 +95,16 @@
        position="60,46"
        orientation="0,-1"
        id="guide6"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="8,57"
+       orientation="0.70710678,-0.70710678"
+       id="guide7"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="7,57"
+       orientation="-0.70710678,-0.70710678"
+       id="guide8"
        inkscape:locked="false" />
   </sodipodi:namedview>
   <defs
@@ -169,7 +179,8 @@
   </g>
   <g
      id="Layer_1"
-     data-name="Layer 1">
+     data-name="Layer 1"
+     inkscape:label="Main Body">
     <path
        d="M 32,5 C 16.551,5 4,17.551 4,33 4,48.449 16.551,61 32,61 47.449,61 60,48.449 60,33 60,17.551 47.449,5 32,5 Z"
        class="cls-1"
@@ -195,14 +206,14 @@
        class="cls-3"
        id="path4"
        style="display:inline;fill:#353535;fill-opacity:1"
-       inkscape:label="Cercle foncé intérieur" />
+       inkscape:label="Cercle foncé intérieur"
+       sodipodi:insensitive="true" />
     <path
-       d="m 32.477,31.484 -0.954,1.032 16.149,14.902 c 0.327,-0.332 0.636,-0.683 0.941,-1.035 z"
+       d="m 32.481827,31.519138 -0.989436,0.998077 15.619091,15.456514 c 0.338387,-0.320385 0.659448,-0.660387 0.976547,-1.001529 z"
        class="cls-4"
        id="path5"
        style="display:inline"
-       inkscape:label="Petite aiguille rouge"
-       sodipodi:insensitive="true" />
+       inkscape:label="Petite aiguille rouge" />
     <path
        d="m 32,29 c -2.207,0 -4,1.793 -4,4 0,2.207 1.793,4 4,4 2.207,0 4,-1.793 4,-4 0,-2.207 -1.793,-4 -4,-4 z"
        class="cls-5"

@@ -1,4 +1,17 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Aealith2839/stopw/master/data/icons/org.eric.stopw.svg"
+       width="115"
+       height="115"
+       alt="stopw application icon">
+</p>
+
 # stopw
+
+A compact timer for GNOME that performs an action when the countdown ends.
+
+stopw is written in Python using GTK 4 and libadwaita. It focuses on a
+small interface, quick duration adjustments and a clear indication of
+the scheduled action.
 
 ## Screenshots
 
@@ -9,12 +22,6 @@
   &nbsp;&nbsp;&nbsp;&nbsp;
   <img src="screenshots/running.png" width="30%" alt="stopw countdown running">
 </p>
-
-A compact timer for GNOME that performs an action when the countdown ends.
-
-stopw is written in Python using GTK 4 and libadwaita. It focuses on a
-small interface, quick duration adjustments and a clear indication of
-the scheduled action.
 
 ## Project status
 
@@ -120,3 +127,6 @@ credits and licensing information.
 sounds/complete.ogg originated from Interface sounds by Kenney
 (https://kenney.nl/assets/interface-sounds)
 License: Creative Commons CC0 1.0
+
+The original application icon was created by Aealith2839.
+License: Creative Commons CC0 1.0.
