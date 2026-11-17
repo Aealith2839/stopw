@@ -1,7 +1,6 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/Aealith2839/stopw/master/data/icons/org.eric.stopw.svg"
        width="115"
-       height="115"
        alt="stopw application icon">
 </p>
 
