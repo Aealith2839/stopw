@@ -37,8 +37,9 @@ remains with the project maintainer.
 
 ## Artwork and translations
 
-The repository still contains resources and translations inherited from
-Time Switch. Their presence does not mean they have been adapted to stopw.
+The repository may contain resources or translations originally present in
+Time Switch. Their presence does not mean that they have been adapted to
+stopw.
 
 Existing attribution and license notices must be preserved for any
 resources that are retained or redistributed.
