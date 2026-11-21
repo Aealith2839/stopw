@@ -816,6 +816,9 @@ class StopwWindow(Adw.ApplicationWindow):
             b'.red-button:hover {'
             b' background: #e01b24;'
             b'}'
+            b'.running-label {'
+            b' font-weight: bold;'
+            b'}'
         )
 
         # Install the stylesheet for this display. The application priority
@@ -1012,6 +1015,9 @@ class StopwWindow(Adw.ApplicationWindow):
 
         # This label identifies the armed action while the countdown runs.
         self.running_label = Gtk.Label()
+        self.running_label.add_css_class("running-label")
+        self.running_label.set_valign(Gtk.Align.FILL)
+        self.running_label.set_yalign(0.47)
         self.stack.add_named(self.running_label, 'running')
 
         body.append(self.stack)

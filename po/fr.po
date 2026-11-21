@@ -72,22 +72,19 @@ msgid "Command"
 msgstr "Commande"
 
 msgid "Before shutdown"
-msgstr "Avant l’arrêt"
+msgstr "Avant arrêt"
 
 msgid "Before restart"
-msgstr "Avant le redémarrage"
+msgstr "Avant redémarrage"
 
 msgid "Before suspend"
-msgstr "Avant la mise en veille"
+msgstr "Avant mise en veille"
 
 msgid "Before notification"
-msgstr "Avant la notification"
+msgstr "Avant notification"
 
 msgid "Before command"
-msgstr "Avant la commande"
-
-msgid "Before action"
-msgstr "Avant l’action"
+msgstr "Avant commande"
 
 msgid "Action"
 msgstr "Action"
