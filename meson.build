@@ -30,7 +30,7 @@ install_data(
 # Installer le XML est indispensable : compiler un schéma absent du
 # répertoire d'installation ne suffit pas.
 install_data(
-  'data/org.eric.stopw.gschema.xml',
+  'data/io.github.aealith2839.stopw.gschema.xml',
   install_dir: get_option('datadir') / 'glib-2.0' / 'schemas',
 )
 
@@ -39,8 +39,8 @@ install_data(
 # ---------------------------------------------------------------------------
 
 i18n.merge_file(
-  input: 'data/org.eric.stopw.desktop.in',
-  output: 'org.eric.stopw.desktop',
+  input: 'data/io.github.aealith2839.stopw.desktop.in',
+  output: 'io.github.aealith2839.stopw.desktop',
   type: 'desktop',
   po_dir: 'po',
   install: true,
@@ -48,20 +48,20 @@ i18n.merge_file(
 )
 
 i18n.merge_file(
-  input: 'data/org.eric.stopw.metainfo.xml.in',
-  output: 'org.eric.stopw.metainfo.xml',
+  input: 'data/io.github.aealith2839.stopw.metainfo.xml.in',
+  output: 'io.github.aealith2839.stopw.metainfo.xml',
   type: 'xml',
   po_dir: 'po',
   install: true,
   install_dir: get_option('datadir') / 'metainfo',
 )
 
-# Le nom demandé est conservé dans les sources : org.eric.stopw.svg.
+# Le nom demandé est conservé dans les sources : io.github.aealith2839.stopw.svg.
 # Seul le fichier installé prend le nom de l'identifiant d'application,
-# afin de correspondre à Icon=org.eric.stopw.
+# afin de correspondre à Icon=io.github.aealith2839.stopw.
 install_data(
-  'data/icons/org.eric.stopw.svg',
-  rename: 'org.eric.stopw.svg',
+  'data/icons/io.github.aealith2839.stopw.svg',
+  rename: 'io.github.aealith2839.stopw.svg',
   install_dir: (
     get_option('datadir')
     / 'icons'
@@ -78,8 +78,8 @@ install_data(
 # Le fichier XML référence complete.wav, situé dans data/.
 # Le Python devra explicitement charger le bundle installé.
 gnome.compile_resources(
-  'org.eric.stopw',
-  'data/org.eric.stopw.gresource.xml',
+  'io.github.aealith2839.stopw',
+  'data/io.github.aealith2839.stopw.gresource.xml',
   source_dir: 'data',
   gresource_bundle: true,
   install: true,
@@ -90,6 +90,7 @@ gnome.compile_resources(
 # Traductions
 # ---------------------------------------------------------------------------
 
+subdir('po')
 
 # ---------------------------------------------------------------------------
 # Finalisation de l'installation

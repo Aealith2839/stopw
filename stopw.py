@@ -16,7 +16,7 @@ action to run when it reaches zero:
 - Run a user-defined shell command.
 
 The application is written with Python, GTK 4 and libadwaita. Preferences
-are stored through GSettings in the ``org.eric.stopw`` schema. System
+are stored through GSettings in the ``io.github.aealith2839.stopw`` schema. System
 actions are requested through D-Bus, with ``logind`` as the preferred
 backend and ConsoleKit as a fallback.
 
@@ -66,7 +66,7 @@ except (ImportError, ValueError) as error:
 # Stable application identifier. It is used for GSettings, the GNOME
 # application launcher, the icon name, single-instance behaviour and
 # GNOME notifications.
-APP_ID = 'org.eric.stopw'
+APP_ID = 'io.github.aealith2839.stopw'
 
 # Short application name displayed to the user and used as the gettext
 # translation domain.
@@ -159,7 +159,7 @@ def load_settings():
     installs the compiled schema under ``~/.local/share/glib-2.0/schemas``.
 
     Raises:
-        RuntimeError: If the ``org.eric.stopw`` schema cannot be found.
+        RuntimeError: If the ``io.github.aealith2839.stopw`` schema cannot be found.
     """
     parent_source = Gio.SettingsSchemaSource.get_default()
     local_schema_dir = BASE_DIR / 'data'
@@ -184,7 +184,7 @@ def load_settings():
 
     if schema is None:
         raise RuntimeError(
-            'The org.eric.stopw GSettings schema is missing. '
+            'The io.github.aealith2839.stopw GSettings schema is missing. '
             'Compile the GSettings schema.'
         )
 
@@ -618,7 +618,7 @@ class StopwWindow(Adw.ApplicationWindow):
 
         Args:
             app: The owning ``StopwApplication`` instance.
-            settings: The validated ``org.eric.stopw`` GSettings object.
+            settings: The validated ``io.github.aealith2839.stopw`` GSettings object.
         """
         super().__init__(application=app, title=APP_NAME)
 
@@ -2009,7 +2009,7 @@ class StopwWindow(Adw.ApplicationWindow):
                     raise FileNotFoundError(path)
                 self.media = Gtk.MediaFile.new_for_filename(path)
             else:
-                self.media = Gtk.MediaFile.new_for_resource('/org/eric/stopw/complete.ogg')
+                self.media = Gtk.MediaFile.new_for_resource('/io/github/aealith2839/stopw/complete.ogg')
             self.media.connect('notify::error', self.audio_error, mode)
             self.media.play()
             if self.media.get_error():
@@ -2104,9 +2104,9 @@ class StopwApplication(Adw.Application):
             settings = load_settings()
             # The compiled resource bundle is registered before any audio
             # playback.
-            resource_paths = [BASE_DIR / 'build' / 'org.eric.stopw.gresource',
-                              BASE_DIR / 'org.eric.stopw.gresource',
-                              SHARE_DIR / 'stopw' / 'org.eric.stopw.gresource']
+            resource_paths = [BASE_DIR / 'build' / 'io.github.aealith2839.stopw.gresource',
+                              BASE_DIR / 'io.github.aealith2839.stopw.gresource',
+                              SHARE_DIR / 'stopw' / 'io.github.aealith2839.stopw.gresource']
             resource_path = next((path for path in resource_paths if path.is_file()), None)
             if resource_path and self.resource is None:
                 self.resource = Gio.Resource.load(str(resource_path))

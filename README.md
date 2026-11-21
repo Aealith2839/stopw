@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Aealith2839/stopw/master/data/icons/org.eric.stopw.svg"
+  <img src="https://raw.githubusercontent.com/Aealith2839/stopw/master/data/icons/io.github.aealith2839.stopw.svg"
        width="115"
        alt="stopw application icon">
 </p>
@@ -103,13 +103,13 @@ application menu.
 To build and install the Flatpak locally, run:
 
 ```bash
-flatpak-builder --user --install --force-clean build-flatpak org.eric.stopw.yml
+flatpak-builder --user --install --force-clean build-flatpak io.github.aealith2839.stopw.yml
 ```
 
 Then launch it with:
 
 ```bash
-flatpak run org.eric.stopw
+flatpak run io.github.aealith2839.stopw
 ```
 
 ## Credits and licensing

@@ -1,4 +1,4 @@
-app-id: org.eric.stopw
+app-id: io.github.aealith2839.stopw
 
 runtime: org.gnome.Platform
 runtime-version: '49'

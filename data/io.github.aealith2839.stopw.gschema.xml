@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-  <schema id="org.eric.stopw" path="/org/eric/stopw/">
+  <schema id="io.github.aealith2839.stopw" path="/io/github/aealith2839/stopw/">
     <key name="remember-timer" type="b">
       <default>true</default>
       <summary>Remember the last timer duration</summary>
