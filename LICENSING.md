@@ -1,8 +1,8 @@
 # Licensing
 
-## stopw contributions
+## stopw application code
 
-The new stopw contributions are licensed under the GNU General Public
+The stopw application code is distributed under the GNU General Public
 License, version 3 only.
 
 SPDX license identifier:
@@ -11,33 +11,40 @@ SPDX license identifier:
 
 The complete license text is provided in COPYING.
 
-## Material inherited from Time Switch
+## Time Switch provenance notice
 
-This repository originated from Time Switch by Fyodor Sobolev.
+The stopw repository began as a GitHub fork of Time Switch by
+Fyodor Sobolev.
 
-The upstream source files identify their license as MIT. The original
-COPYING file contains the X11-style permissive license text, including
-its restriction on promotional use of the copyright holders' names.
-
-That original text is preserved verbatim in:
+The original Time Switch copyright and license notice is preserved
+verbatim in:
 
     LICENSES/TimeSwitch-original.txt
 
-Retained upstream files remain subject to their original copyright
-and license notices. They have not been individually relabeled as
-GPL-3.0-only.
+It is retained to document the repository's origin and preserve the
+upstream notice. Its presence alone does not identify which current
+files, if any, contain material from Time Switch.
 
-The GPL licensing of the stopw contributions does not remove the
-permissions granted under the upstream license for the upstream material.
+This document does not relicense any third-party material or remove
+any applicable third-party license obligations.
 
-## Attribution
+See CREDITS.md for the development history and provenance information.
 
-See CREDITS.md for project provenance and development credits.
+## Application icon
 
-## Other resources
+The stopw application icon was created by Aealith2839 and is made
+available under CC0-1.0.
 
-Artwork, translations and other third-party resources may have their own
-license terms. Preserve their notices and review their licensing before
-adding, adapting or redistributing them.
+## Notification sound
+
+The notification sound in sounds/complete.ogg originates from
+Interface Sounds by Kenney and is made available under CC0-1.0.
+
+Source: https://kenney.nl/assets/interface-sounds
+
+## Other third-party material
+
+Any additional third-party material must retain its applicable
+copyright and license notices.
 
 Dependencies are governed by their respective licenses.

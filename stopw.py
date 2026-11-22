@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: GPL-3.0-only
 # Copyright (C) 2026 Aealith2839
-# Originated from Time Switch by Fyodor Sobolev.
-# See CREDITS.md, LICENSING.md and LICENSES/TimeSwitch-original.txt.
+# Project history and development credits: see CREDITS.md.
+# Licensing information: see LICENSING.md and COPYING.
 
 """stopw: a compact GNOME countdown timer.
 

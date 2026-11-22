@@ -54,16 +54,19 @@ The interface includes:
 
 ## Origins and inspirations
 
-stopw is a GitHub fork of
-[Time Switch](https://github.com/fsobolev/timeswitch) by Fyodor Sobolev,
-an archived and abandoned GNOME timer application. Its timer-based system
-actions inspired several stopw features.
+The stopw repository began as a GitHub fork of
+[Time Switch](https://github.com/fsobolev/timeswitch) by Fyodor Sobolev.
 
-The compact, focused interface approach is also inspired by
+As a Time Switch user, I wanted to build my own compact timer with
+scheduled actions. Time Switch inspired several stopw features, while
+stopw's current implementation was developed separately using the
+AI-assisted process described below.
+
+The compact, focused interface approach was also inspired by
 [Kooha](https://github.com/SeaDve/Kooha) by Dave Patrick.
 
-stopw no longer uses Time Switch code. It is an independent application with
-its own implementation, interface and behaviour.
+stopw is maintained as a separate project. It is not an official
+continuation of Time Switch and is not endorsed by its original author.
 
 ## Development approach
 
@@ -114,14 +117,16 @@ flatpak run io.github.aealith2839.stopw
 
 ## Credits and licensing
 
-stopw originated from
-[Time Switch](https://github.com/fsobolev/timeswitch).
+The stopw application code is distributed under GPL-3.0-only.
+See [COPYING](COPYING) for the complete license text.
 
-The original Time Switch license is preserved in
-[LICENSES/TimeSwitch-original.txt](LICENSES/TimeSwitch-original.txt).
+See [CREDITS.md](CREDITS.md) for project history, development assistance
+and resource attribution, and [LICENSING.md](LICENSING.md) for licensing
+information.
 
-See [CREDITS.md](CREDITS.md) and [LICENSING.md](LICENSING.md) for further
-credits and licensing information.
+The original Time Switch copyright and license notice is preserved in
+[LICENSES/TimeSwitch-original.txt](LICENSES/TimeSwitch-original.txt)
+to document the repository's origin.
 
 sounds/complete.ogg originated from Interface sounds by Kenney
 (https://kenney.nl/assets/interface-sounds)

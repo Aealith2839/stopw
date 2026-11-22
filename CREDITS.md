@@ -4,42 +4,66 @@
 
 stopw is maintained by Aealith2839.
 
-It is an independently developed application that originated from a fork
-of Time Switch. Its interface and behavior have been redesigned around
-a compact timer with scheduled actions.
+The stopw repository began as a GitHub fork of Time Switch. Development
+of the stopw application started with an interface prototype generated
+by Gemini from the maintainer's functional and visual requirements.
+
+The maintainer did not provide Time Switch source code to Gemini.
+The initial discussions considered building an alternative based on
+Time Switch, but the subsequent development process was driven by the
+maintainer's own specifications.
+
+This describes the project's development history. It is not a formal
+source-code provenance audit.
 
 The current stopw implementation was developed in 2026.
 
 ## Time Switch
 
-Original project: Time Switch
-Original author: Fyodor Sobolev
-Original repository: https://github.com/fsobolev/timeswitch
+Project: Time Switch
+Author: Fyodor Sobolev
+Repository: https://github.com/fsobolev/timeswitch
 
-Copyright (C) 2022 Fyodor Sobolev
+Time Switch inspired stopw's timer-based system actions and was the
+starting point for the GitHub repository.
 
-The original license text is preserved verbatim in:
+Its original copyright and license notice is preserved in:
 
     LICENSES/TimeSwitch-original.txt
 
-Upstream source files retained in this repository keep their original
-copyright and license notices.
+stopw is maintained as a separate project. It is not an official
+continuation of Time Switch. Attribution does not imply endorsement
+by Fyodor Sobolev.
 
-This project is not presented as an official release of Time Switch,
-and attribution does not imply endorsement by its original author.
+## Interface inspiration
+
+The compact, focused interface approach was inspired by Kooha.
 
 ## Development assistance
 
-Google Gemini and Perplexity were used as development assistance tools.
+Gemini and Perplexity were used to generate and revise application code.
 
-Responsibility for reviewing, testing, maintaining and publishing stopw
-remains with the project maintainer.
+ChatGPT and DeepSeek also assisted with repository documentation and
+GitHub-related guidance.
 
-## Artwork and translations
+The maintainer defined the requirements and interface, directed the
+development process, tested the application and made the final
+integration decisions.
 
-The repository may contain resources or translations originally present in
-Time Switch. Their presence does not mean that they have been adapted to
-stopw.
+Responsibility for maintaining and publishing stopw remains with the
+project maintainer.
 
-Existing attribution and license notices must be preserved for any
-resources that are retained or redistributed.
+## Application icon
+
+The stopw application icon was created by Aealith2839 using Inkscape.
+
+License: CC0-1.0.
+
+## Notification sound
+
+The notification sound in sounds/complete.ogg originates from
+Interface Sounds by Kenney:
+
+https://kenney.nl/assets/interface-sounds
+
+License: CC0-1.0.
