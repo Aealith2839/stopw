@@ -60,7 +60,7 @@ an archived and abandoned GNOME timer application. Its timer-based system
 actions inspired several stopw features.
 
 The compact, focused interface approach is also inspired by
-[Kooha](https://github.com/davep/kooha) by Dave Patrick.
+[Kooha](https://github.com/SeaDve/Kooha) by Dave Patrick.
 
 stopw no longer uses Time Switch code. It is an independent application with
 its own implementation, interface and behaviour.
