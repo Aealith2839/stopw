@@ -82,11 +82,23 @@ were made by me.
 
 ## Run from source
 
-From the repository root, run:
+Build the project once so that Meson generates the translation
+catalogues:
+
+```bash
+meson setup build
+meson compile -C build
+```
+
+Then, from the repository root, run:
 
 ```bash
 python3 stopw.py
 ```
+
+The application uses the translation catalogues generated in
+`build/po` when launched directly from the source tree. Installed
+copies use the standard `share/locale` hierarchy instead.
 
 ## Install with Meson
 

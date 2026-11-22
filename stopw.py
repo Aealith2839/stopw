@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: GPL-3.0-only
 # Copyright (C) 2026 Aealith2839
-# Project history and development credits: see CREDITS.md.
-# Licensing information: see LICENSING.md and COPYING.
+# Originated from Time Switch by Fyodor Sobolev.
+# See CREDITS.md, LICENSING.md and LICENSES/TimeSwitch-original.txt.
 
 """stopw: a compact GNOME countdown timer.
 
@@ -76,10 +76,9 @@ APP_NAME = 'stopw'
 # the source tree, this is the project root.
 BASE_DIR = Path(__file__).resolve().parent
 
-# Translation directory used when stopw is executed directly from the
-# source tree. Meson installs compiled translations under the standard
-# share/locale hierarchy instead.
-LOCALE_DIR = BASE_DIR / 'locale'
+# Meson builds source-tree translation catalogues under build/po.
+# Installed copies use the standard share/locale hierarchy instead.
+LOCALE_DIR = BASE_DIR / 'build' / 'po'
 
 # Maximum timer duration: 99 hours, 59 minutes and 59 seconds.
 MAX_TIMER_SECONDS = 359999
