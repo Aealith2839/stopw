@@ -15,3 +15,6 @@ po/*/LC_MESSAGES/
 
 # Local backup files
 *.before-*
+
+# Flatpak release bundles
+dist/
