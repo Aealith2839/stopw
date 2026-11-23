@@ -6,6 +6,8 @@ sdk: org.gnome.Sdk
 
 command: stopw
 
+separate-locales: false
+
 finish-args:
   # Affichage Wayland et repli X11.
   - --share=ipc
